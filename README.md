@@ -6,3 +6,5 @@ Event extraction paper List
 -Event Detection without Triggers   本文提出了一种不需要触发词进行的事件检测（TBN-NAM）模型，并取得了SOTA的效果。具体地，将输入的句子与事件类型进行多个二分类，输出为0或1，从而检测句子中是否包含目标类型的事件。本文还利用atteneion机制进行局部的特征提取，结合全局特征更好地进行特征融合，使分类结果更加准确。[paper](https://www.aclweb.org/anthology/N19-1080.pdf) [code](https://github.com/liushulinle/event_detection_without_triggers)
 
 -How Does Context Matter? On the Robustness of Event Detection with Context-Selective Mask Generalization   本文强调鲁棒性建模在ED模型中的重要性来。我们首先指出了三个明显的例子来说明现有ED模型的脆弱性。在分析其原因的基础上，我们提出了一种新的ED训练机制，称为上下文选择掩码泛化（context selective mask generalization），它可以有效地挖掘特定于上下文的学习模式，并对ED模型进行鲁棒化。[paper](https://www.aclweb.org/anthology/2020.findings-emnlp.229.pdf) [code]()
+
+-Incremental Event Detection via Knowledge Consolidation Networks   本文首次提出增量事件检测任务，设计了一种知识整合网络来实现增量事件检测，并取得了SOTA的效果。具体地，第一步，使用Bert作为trigger extractor；第二步，为了解决语义模糊问题，采用了原型增强回顾来保留具有代表性的样例；最后，对于增量学习存在的catastrophic forgeting问题所造成的class imbalance,设计了一种分层的知识蒸馏，分别对features-level和predictions-level进行知识蒸馏，使模型在预测新的class的同时，不会遗忘之前的class。[paper](https://www.aclweb.org/anthology/2020.emnlp-main.52.pdf)
